@@ -1,0 +1,102 @@
+:root {
+  color-scheme: dark;
+  --bg: #161718;
+  --panel: #242628;
+  --text: #f0f0ef;
+  --accent: #ff7b39;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #30353d 0%, var(--bg) 42%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--panel) 90%, black 10%);
+  border: 1px solid #393c3f;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+input,
+select,
+textarea,
+button {
+  border-radius: 8px;
+  border: 1px solid #4b4f53;
+  background: #16181b;
+  color: var(--text);
+  padding: 0.55rem;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.build-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.build-list li {
+  background: #171a1d;
+  border: 1px solid #2f3337;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.status {
+  color: #9bd08f;
+  font-size: 0.9rem;
+}
+
+dialog {
+  border: 1px solid #43464a;
+  border-radius: 12px;
+  background: #111316;
+  color: var(--text);
+  max-width: 430px;
+}
+
+@media (max-width: 750px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
